@@ -2,6 +2,8 @@
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button, NavbarMenu, NavbarMenuItem, NavbarMenuToggle} from "@nextui-org/react";
 import Link from "next/link";
+import ThemeToggle from "../themeToggleButton/ThemeToggleButton";
+
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -51,6 +53,9 @@ const Nav = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
+          <ThemeToggle></ThemeToggle>
+        </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
         </NavbarItem>

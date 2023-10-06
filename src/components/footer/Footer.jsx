@@ -3,17 +3,17 @@ import React from "react";
 const Footer = () => {
   return (
 
-  <footer>
+  <footer className="">
   <svg xmlns="http://www.w3.org/2000/svg" class="-mb-0.5 w-full" viewBox="0 0 1367.743 181.155">
     <path
-      class="fill-current text-gray-100 "
+      class="fill-current text-[#90CAF9] "
       id="wave"
       data-name="wave"
       d="M0,0S166.91-56.211,405.877-49.5,715.838,14.48,955.869,26.854,1366,0,1366,0V115H0Z"
       transform="translate(1.743 66.155)"
     ></path>
   </svg>
-  <div class="bg-gradient-to-b from-gray-100 to-transparent  pt-1">
+  <div class="bg-gradient-to-b from-[#90CAF9] to-transparent  pt-1">
     <div class="container m-auto space-y-8 px-6 text-gray-600  md:px-12 lg:px-20">
       <div class="grid grid-cols-8 gap-6 md:gap-0">
         <div class="col-span-8 border-r border-gray-100  md:col-span-2 lg:col-span-3">
