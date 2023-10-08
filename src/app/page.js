@@ -1,13 +1,17 @@
 import Featured from "@/components/featured/HeroSection";
-import styles from "./globals.css";
 import CategoryItems from "@/components/categoryList/CategoryItems";
+import Menu from "@/components/blogMenu/Menu";
+import BlogCardList from "@/components/blogCardList/BlogCardList";
 
-export default function Home({ searchParams }) {
-  const page = parseInt(searchParams.page) || 1;
+export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="min-h-screen">
       <Featured />
       <CategoryItems />
+      <div className="flex gap-12">
+        <BlogCardList />
+        <Menu />
+      </div>
     </div>
   )
 }
