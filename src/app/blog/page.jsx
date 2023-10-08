@@ -1,4 +1,4 @@
-import Menu from "@/components/Menu/Menu";
+import Menu from "@/components/blogMenu/Menu";
 import BlogCardList from "@/components/blogCardList/BlogCardList";
 
 const BlogPage = () => {

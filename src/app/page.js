@@ -1,7 +1,7 @@
 import Featured from "@/components/featured/HeroSection";
 import CategoryItems from "@/components/categoryList/CategoryItems";
-import Menu from "@/components/Menu/Menu";
 import BlogCardList from "@/components/blogCardList/BlogCardList";
+import Menu from "@/components/blogMenu/Menu";
 
 export default function Home() {
   return (
