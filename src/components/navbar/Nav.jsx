@@ -1,12 +1,12 @@
 'use client'
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
-
+import { signOut, useSession } from "next-auth/react";
 import ThemeToggle from "../themeToggleButton/ThemeToggleButton";
 import Link from "next/link";
 
 
 const Nav = () => {
-  
+  const { status } = useSession();
   return (
     <Navbar className="bg-transparent rounded-lg" justify="start">
       <NavbarBrand  justify="start">
@@ -28,7 +28,13 @@ const Nav = () => {
             Features
           </Link>
         </NavbarItem>
-        <Dropdown placement="bottom-end">
+        {status === "unauthenticated" ? (
+        <Link href="/login">
+          Login
+        </Link>
+      ) : (
+        <>
+          <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Avatar
               isBordered
@@ -46,16 +52,14 @@ const Nav = () => {
               <p className="font-semibold">zoey@example.com</p>
             </DropdownItem>
             <DropdownItem key="settings">My Settings</DropdownItem>
-            <DropdownItem key="team_settings">Team Settings</DropdownItem>
-            <DropdownItem key="analytics">Analytics</DropdownItem>
-            <DropdownItem key="system">System</DropdownItem>
-            <DropdownItem key="configurations">Configurations</DropdownItem>
-            <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
-            <DropdownItem key="logout" color="danger">
+            <DropdownItem onClick={signOut} key="logout" color="danger">
               Log Out
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
+        </>
+      )}
+        
         
       </NavbarContent>
       

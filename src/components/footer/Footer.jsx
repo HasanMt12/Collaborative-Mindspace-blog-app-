@@ -4,22 +4,22 @@ const Footer = () => {
   return (
 
   <footer className="">
-  <div class="bg-gradient-to-b from-[#90CAF9] to-transparent  pt-1">
-    <div class="container m-auto space-y-8 px-6 text-gray-600  md:px-12 lg:px-20">
-      <div class="grid grid-cols-8 gap-6 md:gap-0">
-        <div class="col-span-8 border-r border-gray-100  md:col-span-2 lg:col-span-3">
+  <div className="bg-gradient-to-b from-[#90CAF9] to-transparent  pt-1">
+    <div className="container m-auto space-y-8 px-6 text-gray-600  md:px-12 lg:px-20">
+      <div className="grid grid-cols-8 gap-6 md:gap-0">
+        <div className="col-span-8 border-r border-gray-100  md:col-span-2 lg:col-span-3">
           <div
-            class="flex items-center justify-between gap-6 border-b border-white py-6 md:block md:space-y-6 md:border-none md:py-0"
+            className="flex items-center justify-between gap-6 border-b border-white py-6 md:block md:space-y-6 md:border-none md:py-0"
           >
-            <img src="images/logo.svg" alt="logo tailus" width="100" height="42" class="w-32 dark:brightness-200 dark:grayscale" />
-            <div class="flex gap-6">
-              <a href="#" target="blank" aria-label="github" class="hover:text-cyan-600">
+            <img src="images/logo.svg" alt="logo tailus" width="100" height="42" className="w-32 dark:brightness-200 dark:grayscale" />
+            <div className="flex gap-6">
+              <a href="#" target="blank" aria-label="github" className="hover:text-cyan-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
                   fill="currentColor"
-                  class="bi bi-github"
+                  className="bi bi-github"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -27,13 +27,13 @@ const Footer = () => {
                   />
                 </svg>
               </a>
-              <a href="#" target="blank" aria-label="twitter" class="hover:text-cyan-600">
+              <a href="#" target="blank" aria-label="twitter" className="hover:text-cyan-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
                   fill="currentColor"
-                  class="bi bi-twitter"
+                  className="bi bi-twitter"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -41,13 +41,13 @@ const Footer = () => {
                   />
                 </svg>
               </a>
-              <a href="#" target="blank" aria-label="medium" class="hover:text-cyan-600">
+              <a href="#" target="blank" aria-label="medium" className="hover:text-cyan-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
                   fill="currentColor"
-                  class="bi bi-medium"
+                  className="bi bi-medium"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -58,55 +58,55 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="col-span-8 md:col-span-6 lg:col-span-5">
-          <div class="grid grid-cols-2 gap-6 pb-16 sm:grid-cols-3 md:pl-16">
+        <div className="col-span-8 md:col-span-6 lg:col-span-5">
+          <div className="grid grid-cols-2 gap-6 pb-16 sm:grid-cols-3 md:pl-16">
             <div>
-              <h6 class="text-lg font-medium text-gray-800 dark:text-gray-200">Company</h6>
-              <ul class="mt-4 list-inside space-y-4">
+              <h6 className="text-lg font-medium text-gray-800 dark:text-gray-200">Company</h6>
+              <ul className="mt-4 list-inside space-y-4">
                 <li>
-                  <a href="#" class="transition hover:text-cyan-600">About</a>
+                  <a href="#" className="transition hover:text-cyan-600">About</a>
                 </li>
                 <li>
-                  <a href="#" class="transition hover:text-cyan-600">Customers</a>
+                  <a href="#" className="transition hover:text-cyan-600">Customers</a>
                 </li>
                 <li>
-                  <a href="#" class="transition hover:text-cyan-600">Enterprise</a>
+                  <a href="#" className="transition hover:text-cyan-600">Enterprise</a>
                 </li>
                
               </ul>
             </div>
             <div>
-              <h6 class="text-lg font-medium text-gray-800 dark:text-gray-200">Products</h6>
-              <ul class="mt-4 list-inside space-y-4">
+              <h6 className="text-lg font-medium text-gray-800 dark:text-gray-200">Products</h6>
+              <ul className="mt-4 list-inside space-y-4">
                 <li>
-                  <a href="#" class="transition hover:text-cyan-600">About</a>
+                  <a href="#" className="transition hover:text-cyan-600">About</a>
                 </li>
                 <li>
-                  <a href="#" class="transition hover:text-cyan-600">Customers</a>
+                  <a href="#" className="transition hover:text-cyan-600">Customers</a>
                 </li>
                 <li>
-                  <a href="#" class="transition hover:text-cyan-600">Enterprise</a>
+                  <a href="#" className="transition hover:text-cyan-600">Enterprise</a>
                 </li>
                
               </ul>
             </div>
             <div>
-              <h6 class="text-lg font-medium text-gray-800 dark:text-gray-200">Ressources</h6>
-              <ul class="mt-4 list-inside space-y-4">
+              <h6 className="text-lg font-medium text-gray-800 dark:text-gray-200">Ressources</h6>
+              <ul className="mt-4 list-inside space-y-4">
                 <li>
-                  <a href="#" class="transition hover:text-cyan-600">About</a>
+                  <a href="#" className="transition hover:text-cyan-600">About</a>
                 </li>
                 <li>
-                  <a href="#" class="transition hover:text-cyan-600">Customers</a>
+                  <a href="#" className="transition hover:text-cyan-600">Customers</a>
                 </li>
                 <li>
-                  <a href="#" class="transition hover:text-cyan-600">Enterprise</a>
+                  <a href="#" className="transition hover:text-cyan-600">Enterprise</a>
                 </li>
                
               </ul>
             </div>
           </div>
-          <div class="flex justify-between border-t border-gray-100 dark:border-gray-800 py-4 pb-8 md:pl-16">
+          <div className="flex justify-between border-t border-gray-100 dark:border-gray-800 py-4 pb-8 md:pl-16">
             <span>&copy; Mt 2023 - <span id="year"></span> </span>
             <span>All right reserved</span>
           </div>

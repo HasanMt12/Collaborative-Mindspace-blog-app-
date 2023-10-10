@@ -1,5 +1,7 @@
 "use client";
 
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub } from 'react-icons/bs'
@@ -8,9 +10,19 @@ import { IoHome } from 'react-icons/io5'
 import { BiLogoFacebookCircle} from 'react-icons/bi'
 import backgroundPhoto from '@/assets/loginPagePhoto.jpeg'
 
+
 const LoginPage = () => {
- 
-  
+ const {data,  status } = useSession();
+  console.log(data, status)
+  const router = useRouter();
+
+  if (status === "loading") {
+    return <div >Loading...</div>;
+  }
+
+  if (status === "authenticated") {
+    router.push("/")
+  }
   return (
    
    <div className='relative min-h-screen '>
@@ -33,7 +45,8 @@ const LoginPage = () => {
                 </div>
 
                 <div className='mt-5 flex justify-center flex-col items-center gap-5 lg:w-[40%] '>
-                  <button className=' border  flex items-center justify-evenly  font-semibold text-sm  bg-[#871ae00e] rounded-xl py-2 w-full focus:scale-95 duration-300 ease-in-out transition-all hover:bg-[#871ae02d]' type='button'><span ><FcGoogle />
+                  <button onClick={() => signIn("google") }
+                   className=' border  flex items-center justify-evenly  font-semibold text-sm  bg-[#871ae00e] rounded-xl py-2 w-full focus:scale-95 duration-300 ease-in-out transition-all hover:bg-[#871ae02d]' type='button'><span ><FcGoogle />
                   </span> Sign in with Google <span></span></button>
                   <button className='  border  flex items-center justify-evenly  font-semibold text-sm  bg-[#871ae00e] rounded-xl py-2 w-full focus:scale-95 duration-300 ease-in-out transition-all hover:bg-[#871ae02d]' type='button'><span ><BsGithub />
                   </span> Sign in with GitHub<span></span></button>
