@@ -13,6 +13,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+ 
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
           <div className="wrapper px-20 ">
             <Nav/>
             {children}
-            <Footer/>
+           <Footer /> {/* Render the Footer conditionally */}
           </div>
         </div>
         </ThemeProvider>
