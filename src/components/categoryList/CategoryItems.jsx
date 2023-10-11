@@ -1,79 +1,43 @@
 
 import Link from "next/link";
-import Image from "next/image";
 
-const CategoryItems = () => {
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/categories", {
+    cache: "no-store",
+  });
 
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
+
+  return res.json();
+};
+const CategoryItems = async () => {
+ const data = await getData();
   return (
     <div className="">
-      <h1 className="">Popular Categories</h1>
+      <h1 className="text-sky-800 font-semibold my-1">Popular Categories</h1>
        <div className="grid lg:grid-cols-5 lg:gap-4 md:grid-cols-3 md:gap-3 grid-cols-3 gap-1">
          
-        <Link
-            href="/blog"
-            className={`flex justify-center lg:gap-4 md:gap-3 gap-1 items-center lg:h-20 md:h-16 h-14 rounded-lg lg:text-lg md:text-md text-xs  bg-sky-200 `}
-          >
-              <Image
-                src="/fashion.png"
-                alt=""
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-            Fashion
-          </Link>
+      {data?.map((item) => (
           <Link
-            href="/blog"
-            className={`flex justify-center lg:gap-4 md:gap-3 gap-1 items-center lg:h-20 md:h-16 h-14 rounded-lg lg:text-lg md:text-md text-xs  bg-sky-200 `}
+            href="/blog?cat=style"  title={`${item.title} blogs`}
+            className={`flex justify-center lg:gap-4 md:gap-3 gap-1 items-center lg:h-20 md:h-16 h-14 rounded-lg lg:text-lg md:text-md text-xs relative`}
+            key={item._id}
           >
-              <Image
-                src="/food.png"
-                alt=""
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-            food
+            <div
+              className="absolute inset-0  bg-cover bg-center rounded-lg"
+              style={{
+                backgroundImage: `url('${item.img}')`,
+                opacity: 0.6, // Adjust the opacity as needed
+              }}
+            ></div>
+            <div className="text-gray-700 text-xl font-semibold z-10 relative">
+              {item.title}
+            </div>
           </Link>
-          <Link
-            href="/blog"
-            className={`flex justify-center lg:gap-4 md:gap-3 gap-1 items-center lg:h-20 md:h-16 h-14 rounded-lg lg:text-lg md:text-md text-xs  bg-sky-200 `}
-          >
-              <Image
-                src="/fashion.png"
-                alt=""
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-            Fashion
-          </Link>
-          <Link
-            href="/blog"
-            className={`flex justify-center lg:gap-4 md:gap-3 gap-1 items-center lg:h-20 md:h-16 h-14 rounded-lg lg:text-lg md:text-md text-xs  bg-sky-200`}
-          >
-              <Image
-                src="/style.png"
-                alt=""
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-            style
-          </Link>
-          <Link
-            href="/blog"
-            className={`flex justify-center lg:gap-4 md:gap-3 gap-1 items-center lg:h-20 md:h-16 h-14 rounded-lg lg:text-lg md:text-md text-xs  bg-sky-200 `}
-          >
-              <Image
-                src="/food.png"
-                alt=""
-                width={32}
-                height={32}
-                className="rounded-lg "
-              />
-            food
-          </Link>
+        ))}
+         
       </div>
     </div>
   );
