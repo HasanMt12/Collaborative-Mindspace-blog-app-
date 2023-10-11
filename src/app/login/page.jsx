@@ -12,8 +12,8 @@ import backgroundPhoto from '@/assets/loginPagePhoto.jpeg'
 
 
 const LoginPage = () => {
- const {data,  status } = useSession();
-  console.log(data, status)
+ const { status } = useSession();
+
   const router = useRouter();
 
   if (status === "loading") {
