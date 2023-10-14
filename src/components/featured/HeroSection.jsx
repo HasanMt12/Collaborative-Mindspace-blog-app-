@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./hero.module.css";
 import Image from "next/image";
 
 const Featured = () => {
@@ -25,20 +24,20 @@ const Featured = () => {
         
     </div>
       <div className="lg:-mt-28 md:-mt-16 -mt-14">
-      <h1 className={`${styles.title} `}>
+      <h1 className={`lg:text-4xl md:text-2xl sm:text-xl lg:text-center text-start`}>
         <b>Share thoughts and ideas. </b> <br></br>
         Join, be part of global conversation.
       </h1>
-      <div className={`${styles.post} lg:mt-14 md:mt-10 mt-7`}>
-        <div className={styles.imgContainer}>
-          <Image src="/heroPhoto.jpg" alt="" fill className="object-cover z-20" />
+      <div className={`flex items-center gap-12 lg:mt-14 md:mt-10 mt-7`}>
+        <div className="flex-1 h-[400px] relative lg:block hidden ">
+          <Image src="/heroPhoto.jpg"  alt="" fill className="object-cover z-20" />
         </div>
-        <div className={styles.textContainer}>
+        <div className="flex flex-1 flex-col gap-2">
           <h1 className="lg:text-[2.2rem] md:text-[1.2rem] text-[0.8rem]">Our platform, Collaborative Mindspace, welcomes all voices.</h1>
-          <p className={`${styles.postDesc} lg:text-[1.8rem] md:text-[0.8rem] text-[0.6rem] `}>
+          <p className={`text-gray-500 font-[300] lg:text-[1.8rem] md:text-[0.8rem] text-[0.6rem] `}>
              Join a global self-expression community. Your perspective matters here. Share stories, thoughts, and connect with voices worldwide.
           </p>
-          <button className={styles.button}>Read More</button>
+          <button className="max-w-max px-4 py-5 rounded-md ">Read More</button>
         </div>
       </div>
       </div>

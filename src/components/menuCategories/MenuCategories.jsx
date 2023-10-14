@@ -10,7 +10,7 @@ const MenuCategories = () => {
       >
         Style
       </Link>
-      <Link href="/blog" className={`px-3 py-6 rounded-lg text-[14px] #57c4ff31`}>
+      <Link href="/blog?cat=fashion" className={`px-3 py-6 rounded-lg text-[14px] #57c4ff31`}>
         Fashion
       </Link>
       <Link href="/blog" className={`px-3 py-6 rounded-lg text-[14px] #57c4ff31`}>

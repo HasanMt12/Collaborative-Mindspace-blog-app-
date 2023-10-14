@@ -1,12 +1,15 @@
 import Menu from "@/components/blogMenu/Menu";
 import BlogCardList from "@/components/blogCardList/BlogCardList";
 
-const BlogPage = () => {
+const BlogPage = ({ searchParams }) => {
+    const page = parseInt(searchParams.page) || 1;
+   const { cat } = searchParams;
+
   return (
     <div className="min-h-screen">
-      <h1 className="text-center text-blue-400 "> Blog</h1>
+      <h1 className="text-center text-blue-400 ">{cat} Blog</h1>
       <div className="flex gap-12">
-        <BlogCardList/>
+        <BlogCardList page={page} cat={cat}/>
         <Menu />
       </div>
     </div>
