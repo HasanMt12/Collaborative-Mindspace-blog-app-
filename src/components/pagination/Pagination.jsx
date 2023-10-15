@@ -10,15 +10,16 @@ const Pagination = ({ page, hasPrev, hasNext }) => {
   return (
     <div className="flex justify-between">
       <button
-        className="w-24 p-4 bg-red-500 text-white rounded-lg"
+        className={`${styles.button} px-4 py-2 rounded-xl`}
         disabled={!hasPrev}
         onClick={() => router.push(`?page=${page - 1}`)}
       >
         Previous
       </button>
       <button
-        disabled={!hasNext}
-        className={styles.button}  
+         disabled={!hasNext}
+        className={`${styles.button} px-4 py-2 rounded-xl`} 
+        
         onClick={() => router.push(`?page=${page + 1}`)}
       >
         Next

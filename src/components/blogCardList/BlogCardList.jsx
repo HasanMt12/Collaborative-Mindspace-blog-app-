@@ -1,5 +1,6 @@
 import BlogCard from "../blogShowCard/BlogCard";
 import Pagination from "../pagination/Pagination";
+import { FaPenFancy } from 'react-icons/fa';
 
 const getData = async (page, cat) => {
   const res = await fetch(
@@ -25,7 +26,9 @@ const BlogCardList = async ({ page, cat }) => {
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
   return (
      <div className="flex-[5]">
-      <h1 className="my-5">Recent Posts</h1>
+      <div className="flex justify-start items-center gap-1 text-sky-600 mb-5 mt-8">
+      <h1 className=" font-semibold ">Recent Posts __ </h1><FaPenFancy />
+       </div>
       <div>
         {posts?.map((item) => (
           <BlogCard item={item} key={item._id} />

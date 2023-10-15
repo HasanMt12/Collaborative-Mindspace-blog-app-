@@ -104,7 +104,7 @@ const WritePage = () => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <select className="mb-12 px-2 py-5 max-w-max" onChange={(e) => setCatSlug(e.target.value)}>
-        <option value="style">style</option>
+        <option value="lifestyle">lifestyle</option>
         <option value="fashion">fashion</option>
         <option value="food">food</option>
         <option value="culture">culture</option>

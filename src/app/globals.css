@@ -3,17 +3,6 @@
 @tailwind utilities;
 
 
-:root {
-  --bg: #f5f5f5;
-  /* A soft background color */
-  --textColor: #333333;
-  /* A dark text color for readability */
-  --softBg: #e0e0e0;
-  /* A slightly lighter background color */
-  --softTextColor: #777777;
-  /* A lighter text color for contrast */
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -85,3 +74,4 @@ body {
 .quill>.ql-container>.ql-editor.ql-blank::before {
   color: #b3b3b1;
 }
+

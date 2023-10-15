@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import { FaPenFancy } from 'react-icons/fa';
 
 const getData = async () => {
   const res = await fetch("http://localhost:3000/api/categories", {
@@ -16,7 +17,9 @@ const CategoryItems = async () => {
  const data = await getData();
   return (
     <div className="">
-      <h1 className="text-sky-800 font-semibold my-1">Popular Categories</h1>
+      <div className="flex justify-start items-center gap-1 text-sky-600 mb-4">
+      <h1 className=" font-semibold ">Popular Categories __ </h1><FaPenFancy />
+       </div>
        <div className="grid lg:grid-cols-5 lg:gap-4 md:grid-cols-3 md:gap-3 grid-cols-3 gap-1">
          
       {data?.map((item) => (
@@ -29,11 +32,11 @@ const CategoryItems = async () => {
               className="absolute inset-0  bg-cover bg-center rounded-lg"
               style={{
                 backgroundImage: `url('${item.img}')`,
-                opacity: 0.6, // Adjust the opacity as needed
+                opacity: 0.4, // Adjust the opacity as needed
               }}
             ></div>
-            <div className="text-gray-700 text-xl font-semibold z-10 relative">
-              {item.title}
+            <div className="text-gray-700 bg-sky-200/40 text-xl font-semibold z-10 relative rounded-lg p-1">
+             {item.title}
             </div>
           </Link>
         ))}

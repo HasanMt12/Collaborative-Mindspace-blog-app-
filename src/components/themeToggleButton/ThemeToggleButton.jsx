@@ -10,9 +10,9 @@ function ThemeToggle() {
      
  <button
    onClick={toggleTheme}
- className="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+ className={`h-12 w-12 rounded-[50%] p-1  ${theme === 'light' ? 'hover:bg-gray-300' : 'hover:bg-gray-700'}`}>
  {theme === 'light' &&
-  <svg className="fill-violet-700 block" fill="currentColor" viewBox="0 0 20 20">
+  <svg className="fill-cyan-700 block" fill="currentColor" viewBox="0 0 20 20">
     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
 </svg>}
 
