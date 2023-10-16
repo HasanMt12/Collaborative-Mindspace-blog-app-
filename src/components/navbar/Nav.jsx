@@ -41,7 +41,7 @@ const Nav =  () => {
       </NavbarBrand>
     
 
-      <NavbarContent className="hidden sm:flex gap-4 hover:text-cyan-600" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4 hover:text-cyan-600 font-merriweather" justify="center">
         <NavbarItem>
           <Link to="/blog" href="/blog"  color="foreground" >
            blog
@@ -63,7 +63,7 @@ const Nav =  () => {
           </>
         ) : (
           <Link to="/login" color="foreground" href="/login">
-            <Tooltip color="warning" closeDelay={2000} content="Please Login First">
+            <Tooltip color="warning" closeDelay={2000} content="Please Login First" className="custom-tooltip">
             <NavbarItem className="flex items-center justify-center hover:text-cyan-600">
               <FiEdit /> write
             </NavbarItem>

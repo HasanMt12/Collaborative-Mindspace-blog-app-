@@ -1,5 +1,7 @@
 'use client'
 import { useTheme } from "@/context/ThemeContext";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -10,9 +12,11 @@ const Footer = () => {
       <div className="grid grid-cols-8 gap-6 md:gap-0">
         <div className="col-span-8 border-r border-gray-400  md:col-span-2 lg:col-span-3">
           <div
-            className="flex items-center justify-between gap-6 border-b border-gray-400 py-6 md:block md:space-y-6 md:border-none md:py-0"
+            className="flex items-center justify-between gap-6 border-b border-gray-400 lg:py-6 md:block md:space-y-6 md:border-none md:py-3 py-2"
           >
-            <img src="images/logo.svg" alt="logo tailus" width="100" height="42" className="w-32 dark:brightness-200 dark:grayscale" />
+            <Link to="/" href="/">
+           <Image src="/g.png"  height={60} width={120} alt="logo" className=""></Image>
+       </Link>
             <div className="flex gap-6">
               <a href="#" target="blank" aria-label="github" className="text-md">
                 <svg
@@ -59,49 +63,49 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-8 md:col-span-6 lg:col-span-5">
+        <div className="col-span-8 md:col-span-6 lg:col-span-5 lg:py-6 md:py-3 py-2">
         <div className={`grid grid-cols-2 gap-6 pb-16 sm:grid-cols-3 md:pl-16 ${theme === 'light' ? 'text-gray-700' : 'text-gray-100'}`}>
             <div>
-              <h6 className={`text-lg font-medium ${theme === 'light' ? 'text-cyan-600' : 'text-sky-300'}`}>blogs</h6>
+              <h6 className={`lg:text-lg md:text-md text-sm font-medium ${theme === 'light' ? 'text-cyan-600' : 'text-sky-300'}`}>blogs</h6>
               <ul className="mt-2 list-inside space-y-1">
                 <li>
-                  <a href="#" className={`transition text-md ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>LifeStyle</a>
+                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>LifeStyle</a>
                 </li>
                 <li>
-                  <a href="#" className={`transition text-md ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Travel</a>
+                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Travel</a>
                 </li>
                 <li>
-                  <a href="#" className={`transition text-md ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>coding</a>
+                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>coding</a>
                 </li>
                
               </ul>
             </div>
             <div>
-              <h6 className={`text-lg font-medium ${theme === 'light' ? 'text-cyan-600' : 'text-sky-300'}`}>About us</h6>
+              <h6 className={`lg:text-lg md:text-md text-sm font-medium ${theme === 'light' ? 'text-cyan-600' : 'text-sky-300'}`}>About us</h6>
               <ul className="mt-2 list-inside space-y-1">
                 <li>
-                  <a href="#" className={`transition text-md ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Advertise</a>
+                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Advertise</a>
                 </li>
                 <li>
-                  <a href="#" className={`transition text-md ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Contact US</a>
+                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Contact US</a>
                 </li>
                 <li>
-                  <a href="#" className={`transition text-md ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>FAQ</a>
+                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>FAQ</a>
                 </li>
                
               </ul>
             </div>
             <div>
-              <h6 className= {`text-lg font-medium ${theme === 'light' ? 'text-cyan-600' : 'text-sky-300'}`}>Ressources</h6>
+              <h6 className= {`lg:text-lg md:text-md text-sm font-medium ${theme === 'light' ? 'text-cyan-600' : 'text-sky-300'}`}>Ressources</h6>
               <ul className="mt-2 list-inside space-y-1">
                 <li>
-                  <a href="#" className={`transition text-md ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>About</a>
+                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>About</a>
                 </li>
                 <li>
-                  <a href="#" className={`transition text-md ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Customers</a>
+                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Customers</a>
                 </li>
                 <li>
-                  <a href="#" className={`transition text-md ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Enterprise</a>
+                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Enterprise</a>
                 </li>
                
               </ul>

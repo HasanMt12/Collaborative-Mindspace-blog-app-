@@ -17,7 +17,16 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'merriweather': ['Merriweather', 'serif'],
+        'open-sans': ['Open Sans', 'sans-serif'],
+      },
+
     },
+
+     
   },
   plugins: [nextui()]
 }
+
+ 

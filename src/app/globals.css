@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Merriweather&family=Merriweather+Sans&family=Overpass&family=PT+Sans&family=Poppins:ital,wght@0,500;1,500&family=Roboto:ital,wght@1,100&family=Ubuntu&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Merriweather&family=Merriweather+Sans&family=Open+Sans&family=Overpass&family=PT+Sans&family=Poppins:ital,wght@0,500;1,500&family=Roboto:ital,wght@1,100&family=Ubuntu&display=swap');
 
 * {
   padding: 0;
@@ -29,49 +32,55 @@ body {
   /* Dark theme text color */
 }
 
-.wrapper {
-  max-width: 1536px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-@media screen and (max-width: 1536px) {
-  .wrapper {
-    max-width: 1366px;
+.custom-tooltip {
+  background-color: rgb(2 132 199);
+  opacity: 1;
+  color: #ffffff;
   }
-}
 
-@media screen and (max-width: 1280px) {
   .wrapper {
-    max-width: 1024px;
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
 
-@media screen and (max-width: 1024px) {
-  .wrapper {
-    max-width: 768px;
-    padding-left: 40px;
-    padding-right: 40px;
+  @media screen and (max-width: 1536px) {
+    .wrapper {
+      max-width: 1366px;
+    }
   }
-}
 
-@media screen and (max-width: 768px) {
-  .wrapper {
-    max-width: 640px;
+  @media screen and (max-width: 1280px) {
+    .wrapper {
+      max-width: 1024px;
+    }
   }
-}
 
-@media screen and (max-width: 640px) {
-  .wrapper {
-    max-width: 475px;
+  @media screen and (max-width: 1024px) {
+    .wrapper {
+      max-width: 768px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
-}
 
-.ql-container {
-  font-size: 28px !important;
-}
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      max-width: 640px;
+    }
+  }
 
-.quill>.ql-container>.ql-editor.ql-blank::before {
-  color: #b3b3b1;
-}
+  @media screen and (max-width: 640px) {
+    .wrapper {
+      max-width: 475px;
+    }
+  }
 
+  .ql-container {
+    font-size: 28px !important;
+  }
+
+  .quill>.ql-container>.ql-editor.ql-blank::before {
+    color: #b3b3b1;
+  }

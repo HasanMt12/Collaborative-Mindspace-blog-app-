@@ -96,24 +96,24 @@ const WritePage = () => {
   };
 
   return (
-    <div className="flex relative flex-col">
+    <div className="flex relative flex-col lg:px-12 md:px-4 px-0">
       <input
         type="text"
         placeholder="Title"
-        className="p-12 border-none outline-none bg-transparent placeholder-gray-500 text-gray-500"
+        className="py-6 border-none outline-none bg-transparent placeholder-gray-500 text-gray-500"
         onChange={(e) => setTitle(e.target.value)}
       />
-      <select className="mb-12 px-2 py-5 max-w-max" onChange={(e) => setCatSlug(e.target.value)}>
-        <option value="lifestyle">lifestyle</option>
-        <option value="fashion">fashion</option>
-        <option value="food">food</option>
-        <option value="culture">culture</option>
-        <option value="travel">travel</option>
-        <option value="coding">coding</option>
+      <select title="select blog category" className="mb-6 px-2 py-4 max-w-max cursor-pointer border-cyan-600 text-sky-600 " onChange={(e) => setCatSlug(e.target.value)}>
+        <option className="cursor-pointer text-sky-600" value="lifestyle">lifestyle</option>
+        <option className="cursor-pointer text-sky-600" value="fashion">fashion</option>
+        <option className="cursor-pointer text-sky-600" value="food">food</option>
+        <option className="cursor-pointer text-sky-600" value="culture">culture</option>
+        <option className="cursor-pointer text-sky-600" value="travel">travel</option>
+        <option className="cursor-pointer text-sky-600" value="coding">coding</option>
       </select>
-      <div className="flex relative h-[700px] gap-5">
-        <button className="flex justify-center items-center h-8 w-8 rounded-[50%] border-gray-700 border-1" onClick={() => setOpen(!open)}>
-          <AiOutlinePlus />
+      <div className="flex relative h-[700px] gap-5 mb-11">
+        <button title="upload photo" className="flex justify-center items-center h-8 w-8 rounded-[50%] border-cyan-700 border-1" onClick={() => setOpen(!open)}>
+          <AiOutlinePlus className="text-cyan-600"/>
         </button>
         {open && (
           <div className="flex absolute z-[999] left-12 gap-5 w-full">
@@ -123,26 +123,23 @@ const WritePage = () => {
               onChange={(e) => setFile(e.target.files[0])}
               style={{ display: "none" }}
             />
-            <button className="flex justify-center items-center h-8 w-8 rounded-[50%] border-gray-700 border-1">
+            <button className="flex justify-center items-center h-8 w-8 rounded-[50%] border-cyan-700 border-1">
               <label htmlFor="image">
-              <BsImageFill /> 
+                <BsImageFill className="cursor-pointer text-sky-600"/> 
               </label>
-            </button>
-            <button className="flex justify-center items-center h-8 w-8 rounded-[50%] border-gray-700 border-1">
-              <AiOutlineUpload />
             </button>
            
           </div>
         )}
         <ReactQuill
-          className="w-full"
+          className="w-full ml-0 mt-12 "
           theme="bubble"
           value={value}
           onChange={setValue}
-          placeholder="Tell your story..."
+          placeholder="Tell your story... &#x1F58A;"
         />
       </div>
-      <button className="absolute right-0 top-0 px-2 py-5 border-none bg-green-500 rounded-sm text-white" onClick={handleSubmit}>
+      <button className="absolute lg:right-20 md:right-12 right-0 top-0 px-2 py-2 border-none bg-green-600 rounded-lg text-white" onClick={handleSubmit}>
         Publish
       </button>
     </div>

@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Featured = () => {
-  
+
   return (
     <div className=" relative overflow-hidden pb-12 pt-20 sm:pb-16 sm:pt-32 lg:pb-24 xl:pb-32 xl:pt-40">
       <div className="relative z-10">
@@ -16,16 +17,16 @@ const Featured = () => {
                     </pattern>
                 </defs>
                 <svg x="50%" y="50%" className="overflow-visible fill-blue-500">
-                    <path d="M-300 0h201v201h-201Z M300 200h201v201h-201Z" stroke-width="0"></path>
+                    <path d="M-300 0h201v201h-201Z M300 200h201v201h-201Z" strokeWidth="0"></path>
                 </svg>
-                <rect width="100%" height="100%" stroke-width="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
+                <rect width="100%" height="100%" strokeWidth="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
                 </rect>
             </svg>
         </div>
         
     </div>
       <div className="lg:-mt-28 md:-mt-16 -mt-14">
-      <h1 className={`lg:text-4xl md:text-2xl sm:text-xl lg:text-center text-start`}>
+      <h1 className={`lg:text-4xl md:text-2xl sm:text-xl lg:text-center text-start font-merriweather`}>
         <b>Share thoughts and ideas. </b> <br></br>
         Join, be part of global conversation.
       </h1>
@@ -38,7 +39,7 @@ const Featured = () => {
           <p className={`text-gray-500 font-[300] lg:text-[1.8rem] md:text-[0.8rem] text-[0.6rem] `}>
              Join a global self-expression community. Your perspective matters here. Share stories, thoughts, and connect with voices worldwide.
           </p>
-          <button className="max-w-max px-4 py-5 rounded-md ">Read More</button>
+           
         </div>
       </div>
       </div>

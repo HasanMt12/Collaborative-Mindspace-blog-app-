@@ -43,13 +43,13 @@ const Comments = ({ postSlug }) => {
       <h1 className="mb-7 text-gray-500">Comments</h1>
    
        {status === "authenticated" ? (
-        <div className="flex justify-between items-center gap-7">
+        <div className="flex justify-between items-center  gap-5">
           <textarea
-            placeholder="write a comment..."
-            className="p-5 w-full"
+            placeholder="write a comment... "
+            className="p-3 w-full border-b border-cyan-600"
             onChange={(e) => setDesc(e.target.value)}
           />
-          <button className="py-4 px-5 bg-sky-600 border-none text-white font-bold rounded-sm" onClick={handleSubmit}>
+          <button className="py-3 px-4 bg-sky-600 border-none text-white font-bold rounded-lg" onClick={handleSubmit}>
             Send
           </button>
         </div>

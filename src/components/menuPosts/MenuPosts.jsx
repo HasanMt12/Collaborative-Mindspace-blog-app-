@@ -2,13 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const MenuPosts = ({ withImage }) => {
+
+
+const MenuPosts = async ({ withImage  }) => {
+
   return (
     <div className="flex flex-col gap-8 mb-14 mt-8">
        <Link href="/" className="flex items-center gap-5">
         {withImage && (
           <div className="flex-1 relative aspect-square">
-            <Image src="/blogshow.jpg" alt="" fill className=" object-cover border-3 rounded-full border-gray-300" />
+            <Image src="/culture.png" alt="" fill className=" object-cover border-3 rounded-full border-gray-300" />
           </div>
         )}
         <div className="flex-[4] gap-1 flex-col">
