@@ -14,10 +14,12 @@ import { app } from "@/utils/firebase";
 import ReactQuill from "react-quill";
 import { BsImageFill } from 'react-icons/bs';
 import { AiOutlinePlus , AiOutlineUpload} from 'react-icons/ai';
+import { useTheme } from "@/context/ThemeContext";
 
 const WritePage = () => {
   const { status } = useSession();
   const router = useRouter();
+  const { theme } = useTheme();
 
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState(null);
@@ -94,22 +96,25 @@ const WritePage = () => {
       router.push(`/posts/${data.slug}`);
     }
   };
-
   return (
-    <div className="flex relative flex-col lg:px-12 md:px-4 px-0">
+
+    <div className={`flex relative flex-col lg:px-32 md:px-4 px-0 py-2 rounded-lg shadow-sm mb-1
+    ${theme === 'light' ? 'bg-[#fbfbf7]' : 'bg-[#2b2b2b]'}
+    ${theme === 'light' ? 'shadow-[#ecece7]' : 'shadow-[#2e2e2e]'}
+    `} >
       <input
         type="text"
         placeholder="Title"
-        className="py-6 border-none outline-none bg-transparent placeholder-gray-500 text-gray-500"
+        className="py-6 lg:mt-6 md:mt-4 mt-3 font-merriweather border-none outline-none bg-transparent placeholder-gray-500 text-gray-500 text-xl"
         onChange={(e) => setTitle(e.target.value)}
       />
-      <select title="select blog category" className="mb-6 px-2 py-4 max-w-max cursor-pointer border-cyan-600 text-sky-600 " onChange={(e) => setCatSlug(e.target.value)}>
-        <option className="cursor-pointer text-sky-600" value="lifestyle">lifestyle</option>
-        <option className="cursor-pointer text-sky-600" value="fashion">fashion</option>
-        <option className="cursor-pointer text-sky-600" value="food">food</option>
-        <option className="cursor-pointer text-sky-600" value="culture">culture</option>
-        <option className="cursor-pointer text-sky-600" value="travel">travel</option>
-        <option className="cursor-pointer text-sky-600" value="coding">coding</option>
+      <select title="select blog category" className="mb-6 px-2 py-2 max-w-max cursor-pointer bg-[#78C7C7] rounded-full border-cyan-600 text-white " onChange={(e) => setCatSlug(e.target.value)}>
+        <option className="cursor-pointer text-white" value="lifestyle">lifestyle</option>
+        <option className="cursor-pointer text-white" value="fashion">fashion</option>
+        <option className="cursor-pointer text-white" value="food">food</option>
+        <option className="cursor-pointer text-white" value="culture">culture</option>
+        <option className="cursor-pointer text-white" value="travel">travel</option>
+        <option className="cursor-pointer text-white" value="coding">coding</option>
       </select>
       <div className="flex relative h-[700px] gap-5 mb-11">
         <button title="upload photo" className="flex justify-center items-center h-8 w-8 rounded-[50%] border-cyan-700 border-1" onClick={() => setOpen(!open)}>
@@ -125,24 +130,25 @@ const WritePage = () => {
             />
             <button className="flex justify-center items-center h-8 w-8 rounded-[50%] border-cyan-700 border-1">
               <label htmlFor="image">
-                <BsImageFill className="cursor-pointer text-sky-600"/> 
+                <BsImageFill className="cursor-pointer text-[#78C7C7]"/> 
               </label>
             </button>
            
           </div>
         )}
         <ReactQuill
-          className="w-full ml-0 mt-12 "
+          className="w-full ml-0 mt-6 "
           theme="bubble"
           value={value}
           onChange={setValue}
           placeholder="Tell your story... &#x1F58A;"
         />
       </div>
-      <button className="absolute lg:right-20 md:right-12 right-0 top-0 px-2 py-2 border-none bg-green-600 rounded-lg text-white" onClick={handleSubmit}>
+      <button className="absolute lg:right-20 md:right-12 right-0 top-1 px-2 py-2 border-none bg-[#78C7C7] rounded-full text-white" onClick={handleSubmit}>
         Publish
       </button>
     </div>
+
   );
 };
 

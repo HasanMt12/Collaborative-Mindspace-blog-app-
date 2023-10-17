@@ -37,50 +37,51 @@ body {
   background-color: rgb(2 132 199);
   opacity: 1;
   color: #ffffff;
-  }
+}
 
+.wrapper {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1536px) {
   .wrapper {
-    max-width: 1536px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1366px;
   }
+}
 
-  @media screen and (max-width: 1536px) {
-    .wrapper {
-      max-width: 1366px;
-    }
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    max-width: 1024px;
   }
+}
 
-  @media screen and (max-width: 1280px) {
-    .wrapper {
-      max-width: 1024px;
-    }
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    max-width: 768px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+}
 
-  @media screen and (max-width: 1024px) {
-    .wrapper {
-      max-width: 768px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 640px;
   }
+}
 
-  @media screen and (max-width: 768px) {
-    .wrapper {
-      max-width: 640px;
-    }
+@media screen and (max-width: 640px) {
+  .wrapper {
+    max-width: 475px;
   }
+}
 
-  @media screen and (max-width: 640px) {
-    .wrapper {
-      max-width: 475px;
-    }
-  }
+.ql-container {
+  font-size: 28px !important;
+}
 
-  .ql-container {
-    font-size: 28px !important;
-  }
+.quill>.ql-container>.ql-editor.ql-blank::before {
+  color: #b3b3b1;
+}
 
-  .quill>.ql-container>.ql-editor.ql-blank::before {
-    color: #b3b3b1;
-  }
