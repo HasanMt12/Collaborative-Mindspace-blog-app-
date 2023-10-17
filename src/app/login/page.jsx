@@ -7,7 +7,7 @@ import { BsGithub } from 'react-icons/bs'
 import { FcGoogle } from 'react-icons/fc'
 import { IoHome } from 'react-icons/io5'
 import { BiLogoFacebookCircle} from 'react-icons/bi'
-import Spinner from "@/components/spinner/spinner";
+import Spinner from "@/components/spinner/Spinner";
 
 
 const LoginPage = () => {
