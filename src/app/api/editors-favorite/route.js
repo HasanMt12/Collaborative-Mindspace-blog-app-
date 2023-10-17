@@ -7,7 +7,7 @@ export const GET = async (req) => {
       orderBy: {
         views: "desc",
       },
-      take: 2, // Adjust the number of posts I want to display
+      take: 1, // only one posts I want to display
     });
 
     return new NextResponse(JSON.stringify({ posts }, { status: 200 }));

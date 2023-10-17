@@ -26,7 +26,7 @@ const MenuPosts = async ({  mostPostData   }) => {
           <span className={`w-fit py-1 px-2 text-white rounded-md 
           ${mostPostData?.catSlug === 'travel' && 'bg-[#7EA3A1]'} 
           ${mostPostData?.catSlug === 'lifestyle' && 'bg-[#A694B8]'}
-          ${mostPostData?.catSlug === 'food' && 'bg-[#F4EAD3]'}
+          ${mostPostData?.catSlug === 'food' && 'bg-[#6B4423]'}
           ${mostPostData?.catSlug === 'coding' && 'bg-[#4078C0]'}
           ${mostPostData?.catSlug === 'fashion' && 'bg-[#C0C0C0]'}
           ${mostPostData?.catSlug === 'culture' && 'bg-[#A28776]'}

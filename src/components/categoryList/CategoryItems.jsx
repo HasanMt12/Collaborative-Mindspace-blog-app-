@@ -18,9 +18,10 @@ const CategoryItems = async () => {
   return (
     <div className="">
       <div className="flex justify-start items-center gap-1 text-sky-600 mb-4">
-      <h1 className=" font-semibold font-merriweather">Popular Categories __ </h1><FaPenFancy />
-       </div>
-       <div className="grid lg:grid-cols-5 lg:gap-4 md:grid-cols-3 md:gap-3 grid-cols-3 gap-1">
+        <h1 className=" font-semibold font-merriweather">Popular Categories __ </h1><FaPenFancy />
+      </div>
+
+      <div className="grid lg:grid-cols-5 lg:gap-4 md:grid-cols-3 md:gap-3 grid-cols-3 gap-1">
          
       {data?.map((item) => (
           <Link
