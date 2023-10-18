@@ -39,19 +39,17 @@ const LoginPage = () => {
               </div>
               <div className='mt-3 flex flex-col items-center'>
                 <div>
-                  <h1 className=' md:text-xl text-lg lg:text-3xl  text-[#3b2250] font-semibold'>Login to Your Account </h1>
+                  <h1 className=' md:text-xl text-lg lg:text-3xl  text-cyan-600 font-merriweather font-semibold'>Login to Your Account </h1>
                 </div>
 
-                <div className='mt-5 flex justify-center flex-col items-center gap-5 lg:w-[40%] '>
+                <div className='mt-5 flex justify-center flex-col items-center gap-5 lg:w-[40%] w-[80%]'>
                   <button onClick={() => signIn("google") }
-                   className=' border  flex items-center justify-evenly  font-semibold text-sm  bg-[#871ae00e] rounded-xl py-2 w-full focus:scale-95 duration-300 ease-in-out transition-all hover:bg-[#871ae02d]' type='button'><span ><FcGoogle />
+                   className=' border  flex items-center justify-evenly  font-semibold text-sm  bg-sky-200/40 rounded-xl py-2 w-full focus:scale-95 duration-300 ease-in-out transition-all hover:bg-sky-400/40' type='button'><span ><FcGoogle />
                   </span> Sign in with Google <span></span></button>
-                  <button className='  border  flex items-center justify-evenly  font-semibold text-sm  bg-[#871ae00e] rounded-xl py-2 w-full focus:scale-95 duration-300 ease-in-out transition-all hover:bg-[#871ae02d]' type='button'><span ><BsGithub />
+                  <button onClick={() => signIn("github") } className='  border  flex items-center justify-evenly  font-semibold text-sm  bg-sky-200/40 rounded-xl py-2 w-full focus:scale-95 duration-300 ease-in-out transition-all hover:bg-sky-400/40' type='button'><span ><BsGithub />
                   </span> Sign in with GitHub<span></span></button>               
                 </div>
-                <div className="my-6">Click “Sign In” to agree to Medium’s Terms of Service and  <br></br> 
-                <span>
-               acknowledge that Medium’s Privacy Policy applies to you.</span></div>
+                <div className="lg:my-12 md:my-8 my-4 lg:w-[50%] text-center w-[80%] lg:text-sm text-xs">Click <span className="text-sky-600">“Sign In”</span>  to accept our <span className="border-b-[0.3px] hover:border-sky-600">Terms of Service</span> and <span className="border-b-[0.3px] hover:border-sky-600"> Privacy Policy</span> .</div>
 
               </div>
             </div>

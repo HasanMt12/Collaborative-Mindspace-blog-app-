@@ -59,7 +59,7 @@ const Menu = () => {
       </div>
       <MenuCategories />
 
-      <h2 className="text-gray-500" text-lg>Chosen by the editor</h2>
+      <h2 className="text-gray-500 text-lg" >Chosen by the editor</h2>
 
       <div className="flex justify-start items-center gap-1 text-sky-600 lg:mb-2 md:mb-1 mb-0 lg:mt-2 mt-1">
         <h1 className=" font-semibold font-merriweather">Editors Favorite __ </h1><FaPenFancy />
