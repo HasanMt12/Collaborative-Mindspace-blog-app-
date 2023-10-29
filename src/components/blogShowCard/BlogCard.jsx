@@ -6,7 +6,7 @@ import { AiOutlineEye } from 'react-icons/ai';
 const BlogCard = ({ key, item }) => {
     const { theme } = useTheme();
   return (
-         <div key={key} className={`flex items-start gap-8 mb-12 p-1 ${theme === 'light' ? 'bg-gray-100' : 'bg-[#1E1E1E]'} `} >
+         <div key={key} className={`flex items-start gap-8 mb-12 p-1 ${theme === 'light' ? 'bg-gray-100' : 'bg-[#1E1E1E]'}`}>
       {item.img && (
         <div className="flex-1 h-64 relative hidden md:block">
           <Image src={item.img} alt="" fill className="object-cover" />

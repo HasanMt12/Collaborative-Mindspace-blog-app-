@@ -15,10 +15,10 @@ const Footer = () => {
             className="flex items-center justify-between gap-6 border-b border-gray-400 lg:py-6 md:block md:space-y-6 md:border-none md:py-3 py-2"
           >
             <Link to="/" href="/">
-           <Image src="/g.png"  height={60} width={120} alt="logo" className=""></Image>
+           <Image src="/g.png"  height={50} width={100} alt="logo" className=""></Image>
        </Link>
             <div className="flex gap-6">
-              <a href="#" target="blank" aria-label="github" className="text-md">
+              <a href="#" target="blank" aria-label="github" className="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -46,25 +46,11 @@ const Footer = () => {
                   />
                 </svg>
               </a>
-              <a href="#" target="blank" aria-label="medium" className="text-md">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  className="bi bi-medium"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"
-                  />
-                </svg>
-              </a>
             </div>
           </div>
         </div>
-        <div className="col-span-8 md:col-span-6 lg:col-span-5 lg:py-6 md:py-3 py-2">
-        <div className={`grid grid-cols-2 gap-6 pb-16 sm:grid-cols-3 md:pl-16 ${theme === 'light' ? 'text-gray-700' : 'text-gray-100'}`}>
+        <div className="col-span-8 md:col-span-6 lg:col-span-5 lg:py-6 md:py-3 py-1">
+        <div className={`grid grid-cols-2 gap-6 lg:pb-16 md:pb-10 pb-6 sm:grid-cols-3 md:pl-16 ${theme === 'light' ? 'text-gray-700' : 'text-gray-100'}`}>
             <div>
               <h6 className={`lg:text-lg md:text-md text-sm font-medium ${theme === 'light' ? 'text-cyan-600' : 'text-sky-300'}`}>blogs</h6>
               <ul className="mt-2 list-inside space-y-1">
@@ -95,21 +81,7 @@ const Footer = () => {
                
               </ul>
             </div>
-            <div>
-              <h6 className= {`lg:text-lg md:text-md text-sm font-medium ${theme === 'light' ? 'text-cyan-600' : 'text-sky-300'}`}>Ressources</h6>
-              <ul className="mt-2 list-inside space-y-1">
-                <li>
-                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>About</a>
-                </li>
-                <li>
-                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Customers</a>
-                </li>
-                <li>
-                  <a href="#" className={`transition lg:text-sm md:text-xs text-[10px]  ${theme === 'light' ? 'hover:text-cyan-600' : 'hover:text-sky-300'}`}>Enterprise</a>
-                </li>
-               
-              </ul>
-            </div>
+        
           </div>
           <div className="flex justify-between border-t border-gray-400 py-4 pb-8 md:pl-16">
             <span className={` ${theme === 'light' ? 'text-cyan-600' : 'text-sky-300'}`}>&copy; Hasan Mt 2023 - <span id="year"></span> </span>

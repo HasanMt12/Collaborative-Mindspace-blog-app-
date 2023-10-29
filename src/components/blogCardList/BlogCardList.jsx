@@ -1,10 +1,11 @@
+import { BASE_API_URL } from "@/utils/constants";
 import BlogCard from "../blogShowCard/BlogCard";
 import Pagination from "../pagination/Pagination";
 import { FaPenFancy } from 'react-icons/fa';
 
 const getData = async (page, cat) => {
   const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`,
+    `${BASE_API_URL}/api/posts?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-store",
     }
@@ -24,6 +25,7 @@ const BlogCardList = async ({ page, cat }) => {
 
   const hasPrev = POST_PER_PAGE * (page - 1) > 0;
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
+  
   return (
      <div className="flex-[5]">
       <div className="flex justify-start items-center gap-1 text-sky-600 mb-5 mt-8">

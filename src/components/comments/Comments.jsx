@@ -5,6 +5,8 @@ import Image from "next/image";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
+import { FaPenFancy } from 'react-icons/fa'
+import { BASE_API_URL } from "@/utils/constants";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -24,14 +26,14 @@ const Comments = ({ postSlug }) => {
   const { status } = useSession();
 
   const { data, mutate, isLoading } = useSWR(
-    `http://localhost:3000/api/comments?postSlug=${postSlug}`,
+    `${BASE_API_URL}/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 
   const [desc, setDesc] = useState("");
 
   const handleSubmit = async () => {
-    await fetch("/api/comments", {
+    await fetch(`${BASE_API_URL}/api/comments`, {
       method: "POST",
       body: JSON.stringify({ desc, postSlug }),
     });
@@ -40,7 +42,9 @@ const Comments = ({ postSlug }) => {
 
   return (
     <div className="mt-12">
-      <h1 className="mb-7 text-gray-500">Comments</h1>
+      <div className="flex justify-start mb-2 items-center gap-1 text-sky-600 lg:mb-6 md:mb-4 ">
+        <h1 className=" font-semibold font-merriweather">Comments __ </h1><FaPenFancy />
+      </div>
    
        {status === "authenticated" ? (
         <div className="flex justify-between items-center  gap-5">
@@ -49,18 +53,21 @@ const Comments = ({ postSlug }) => {
             className="p-3 w-full border-b border-cyan-600"
             onChange={(e) => setDesc(e.target.value)}
           />
-          <button className="py-3 px-4 bg-sky-600 border-none text-white font-bold rounded-lg" onClick={handleSubmit}>
+          <button className="py-2 px-4 text-md bg-sky-600 border-none text-white font-bold rounded-lg" onClick={handleSubmit}>
             Send
           </button>
         </div>
       ) : (
-        <Link href="/login">Login to write a comment</Link>
+        <>
+        <h1 className=" font-semibold text-sky-600 font-merriweather">To add your comment to this post,</h1>
+        <h2 className="font-merriweather text-lg">please login <span className="underline text-sky-600"><Link href="/login">here</Link></span></h2>
+        </>
       )}
       <div className="mt-12">
                {isLoading
           ? "loading"
           : data?.map((item) => (
-              <div className=" mb-12" key={item._id}>
+              <div className="border-[1px] rounded-md border-gray-200 p-2 mb-4" key={item._id}>
                 <div className="flex items-center gap-5 mb-5">
                   {item?.user?.image && (
                     <Image
@@ -73,10 +80,10 @@ const Comments = ({ postSlug }) => {
                   )}
                   <div className="flex flex-col gap-1 text-gray-500">
                     <span className="font-medium">{item.user.name}</span>
-                    <span className="text-sm">{item.createdAt}</span>
+                    <span className="lg:text-sm md:text-xs text-[10px]">{item.createdAt}</span>
                   </div>
                 </div>
-                <p className="text-lg font-normal">{item.desc}</p>
+                <p className="text-sm font-normal">{item.desc}</p>
               </div>
             ))}
       </div>

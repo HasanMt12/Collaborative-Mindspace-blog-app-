@@ -4,6 +4,7 @@ import MenuCategories from "../menuCategories/MenuCategories";
 import { useEffect, useState } from "react";
 import { FaPenFancy } from 'react-icons/fa'
 import EditorsFavorite from "../editors-favorite/EditorsFavorite";
+import { BASE_API_URL } from "@/utils/constants";
 
 const Menu = () => {
    const [topPosts, setTopPosts] = useState([]);
@@ -12,7 +13,7 @@ const Menu = () => {
   useEffect(() => {
     const fetchTopPosts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/max-views");
+        const response = await fetch(`${BASE_API_URL}/api/max-views`);
         if (response.ok) {
           const data = await response.json();
           setTopPosts(data.posts);
@@ -28,7 +29,7 @@ const Menu = () => {
     useEffect(() => {
     const fetchTopPosts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/editors-favorite");
+        const response = await fetch(`${BASE_API_URL}/api/editors-favorite`);
         if (response.ok) {
           const data = await response.json();
           setEdiTorsChoice(data.posts);

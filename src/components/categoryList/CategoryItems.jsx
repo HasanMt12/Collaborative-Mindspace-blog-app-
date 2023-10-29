@@ -1,9 +1,10 @@
 
+import { BASE_API_URL } from "@/utils/constants";
 import Link from "next/link";
 import { FaPenFancy } from 'react-icons/fa';
 
 const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/categories", {
+  const res = await fetch(`${BASE_API_URL}/api/categories`, {
     cache: "no-store",
   });
 
